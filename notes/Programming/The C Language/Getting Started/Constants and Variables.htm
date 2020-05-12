@@ -1,0 +1,169 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Constants%20and%20Variables.htm">
+<link rel=File-List href="Constants%20and%20Variables_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.7645in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:3.2305in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Constants
+and Variables</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.6659in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+28 February 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>2:41
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.7645in'>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Constants</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>We can use constants
+to define arbitrary values (strings, booleans and integers) that we probably
+don't want to remember, or do not need to be changed</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#define
+MINIMUM_DRIVING_AGE 16;</code></p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Variables
+or constants?</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>You could use
+either, but constants make it look cleaner, plus you could accidentally change
+the value</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>What
+are variables</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>A variable is like a
+pocket, where you can store things in them!</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Name
+your variables</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Why? Though it is
+not crucial, it is recommended to name your variables meaningfully, so that
+other people (and you yourself) are able to easily understand what the variable
+does.</p>
+
+<h3 style='margin:0in;font-family:Calibri;font-size:12.0pt;color:#5B9BD5'>Rules</h3>
+
+<ul type=disc style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in'>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt'>Must start with either an
+     uppercase letter, lowercase letter, or an underscore</span></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt'>Can then include any amount
+     cased letter, number, or underscore</span></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt'>Cannot be a keyword from C
+     (compiler won't compile)</span></li>
+</ul>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>(regex)
+^[a-zA-Z_][a-zA-Z0-9_]*$</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Using
+Variables</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Step 1) Declare</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Step 2) Initialise</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Step 3) Assign</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Types
+of variables</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>The most common
+variables in C are as follows</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>str - String - Holds
+text and character. To make a string, enclose your text in quotation marks ie
+&quot;HELLO&quot;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>int - Integer -
+Representation of integer numbers (ie 0, 1, 2, 500, -9)</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>float - Floating
+Point Numbers - These are decimal numbers (ie 1.555, 3.141592)</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>bool - Booleans -
+Either a true or false value</p>
+
+<p style='margin:0in;font-family:"Cambria Math";font-size:11.0pt'
+lang="x-IV_mathan">&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Defining
+a variable</h1>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>To
+initialise a variable without a value</h2>
+
+<p style='margin:0in;font-family:Consolas;font-size:11.0pt'>TYPE NAME;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>For example</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>str school; </code></p>
+
+<p style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>To
+initialise a variable with a value</h2>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>TYPE NAME =
+VALUE;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>For example</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>str school =
+&quot;UNSW&quot;;</code></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

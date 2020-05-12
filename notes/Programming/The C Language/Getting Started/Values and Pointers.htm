@@ -1,0 +1,168 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Values%20and%20Pointers.htm">
+<link rel=File-List href="Values%20and%20Pointers_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.5in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.7555in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Values and
+Pointers</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.4562in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+7 March 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>2:59
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.5in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'><a
+href="https://stackoverflow.com/a/2094715">https://stackoverflow.com/a/2094715</a></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:inherit;font-size:.75pt'><span
+style='color:#0077CC'>vote</span><span style='color:#6A737C'>accepted</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:11.25pt;color:#242729'>You
+have pointers and values:</p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#2B91AF;background:#EFF0F1'>int</span><span style='color:#303336;
+background:#EFF0F1'>* p; </span><span style='color:#828990;background:#EFF0F1'>//
+variable p is pointer to integer type</span><span style='color:#303336;
+background:#EFF0F1'><br>
+</span><span style='color:#2B91AF;background:#EFF0F1'>int</span><span
+style='color:#303336;background:#EFF0F1'> i; </span><span style='color:#828990;
+background:#EFF0F1'>// integer value</span></p>
+
+<p style='margin:0in;color:#242729'><span style='font-family:inherit;
+font-size:11.25pt'>You turn a pointer into a value with&nbsp;</span><span
+style='font-family:Consolas;font-size:9.75pt;background:#EFF0F1'>*</span><span
+style='font-family:inherit;font-size:11.25pt'>:</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#2B91AF;background:#EFF0F1'>int</span><span style='color:#303336;
+background:#EFF0F1'> i2 = *p; </span><span style='color:#828990;background:
+#EFF0F1'>// integer i2 is assigned with integer value that pointer p is
+pointing to</span></p>
+
+<p style='margin:0in;color:#242729'><span style='font-family:inherit;
+font-size:11.25pt'>You turn a value into a pointer with&nbsp;</span><span
+style='font-family:Consolas;font-size:9.75pt;background:#EFF0F1'>&amp;</span><span
+style='font-family:inherit;font-size:11.25pt'>:</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#2B91AF;background:#EFF0F1'>int</span><span style='color:#303336;
+background:#EFF0F1'>* p2 = &amp;i; </span><span style='color:#828990;
+background:#EFF0F1'>// pointer p2 will point to the address of integer i</span></p>
+
+<p style='margin:0in;color:#242729'><span style='font-family:inherit;
+font-size:11.25pt'>Edit: In the case of arrays, they are treated very much like
+pointers. If you think of them as pointers, you'll be using&nbsp;</span><span
+style='font-family:Consolas;font-size:9.75pt;background:#EFF0F1'>*</span><span
+style='font-family:inherit;font-size:11.25pt'>&nbsp;to get at the values inside
+of them as explained above, but there is also another, more common way using
+the&nbsp;</span><span style='font-family:Consolas;font-size:9.75pt;background:
+#EFF0F1'>[]</span><span style='font-family:inherit;font-size:11.25pt'>&nbsp;operator:</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#2B91AF;background:#EFF0F1'>int</span><span style='color:#303336;
+background:#EFF0F1'> a[</span><span style='color:#7D2727;background:#EFF0F1'>2</span><span
+style='color:#303336;background:#EFF0F1'>];<span style='mso-spacerun:yes'> 
+</span></span><span style='color:#828990;background:#EFF0F1'>// array of
+integers</span><span style='color:#303336;background:#EFF0F1'><br>
+</span><span style='color:#2B91AF;background:#EFF0F1'>int</span><span
+style='color:#303336;background:#EFF0F1'> i = *a; </span><span
+style='color:#828990;background:#EFF0F1'>// the value of the first element of a</span><span
+style='color:#303336;background:#EFF0F1'><br>
+</span><span style='color:#2B91AF;background:#EFF0F1'>int</span><span
+style='color:#303336;background:#EFF0F1'> i2 = a[</span><span style='color:
+#7D2727;background:#EFF0F1'>0</span><span style='color:#303336;background:#EFF0F1'>];
+</span><span style='color:#828990;background:#EFF0F1'>// another way to get the
+first element</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:11.25pt;color:#242729'>To
+get the second element:</p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#2B91AF;background:#EFF0F1'>int</span><span style='color:#303336;
+background:#EFF0F1'> a[</span><span style='color:#7D2727;background:#EFF0F1'>2</span><span
+style='color:#303336;background:#EFF0F1'>]; </span><span style='color:#828990;
+background:#EFF0F1'>// array</span><span style='color:#303336;background:#EFF0F1'><br>
+</span><span style='color:#2B91AF;background:#EFF0F1'>int</span><span
+style='color:#303336;background:#EFF0F1'> i = *(a + </span><span
+style='color:#7D2727;background:#EFF0F1'>1</span><span style='color:#303336;
+background:#EFF0F1'>); </span><span style='color:#828990;background:#EFF0F1'>//
+the value of the second element</span><span style='color:#303336;background:
+#EFF0F1'><br>
+</span><span style='color:#2B91AF;background:#EFF0F1'>int</span><span
+style='color:#303336;background:#EFF0F1'> i2 = a[</span><span style='color:
+#7D2727;background:#EFF0F1'>1</span><span style='color:#303336;background:#EFF0F1'>];
+</span><span style='color:#828990;background:#EFF0F1'>// the value of the
+second element</span></p>
+
+<p style='margin:0in;color:#242729'><span style='font-family:inherit;
+font-size:11.25pt'>So the&nbsp;</span><span style='font-family:Consolas;
+font-size:9.75pt;background:#EFF0F1'>[]</span><span style='font-family:inherit;
+font-size:11.25pt'>&nbsp;indexing operator is a special form of the&nbsp;</span><span
+style='font-family:Consolas;font-size:9.75pt;background:#EFF0F1'>*</span><span
+style='font-family:inherit;font-size:11.25pt'>&nbsp;operator, and it works like
+this:</span></p>
+
+<p style='margin:0in;font-family:inherit;font-size:9.75pt'><span
+style='color:#303336;background:#EFF0F1'>a[i] == *(a + i);<span
+style='mso-spacerun:yes'>  </span></span><span style='color:#828990;background:
+#EFF0F1'>// these two statements are the same thing</span></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p><cite style='margin:0in;font-family:Calibri;font-size:9.0pt;color:#595959'>From
+&lt;<a
+href="https://stackoverflow.com/questions/2094666/pointers-in-c-when-to-use-the-ampersand-and-the-asterisk">https://stackoverflow.com/questions/2094666/pointers-in-c-when-to-use-the-ampersand-and-the-asterisk</a>&gt;
+</cite></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'><a
+href="http://www.learn-c.org/en/Pointers">http://www.learn-c.org/en/Pointers</a></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="The%20printf%20function.htm">
+<link rel=File-List href="The%20printf%20function_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.5in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.8305in'>
+
+<p style='margin:0in;font-size:20.0pt'><span style='font-family:"Calibri Light"'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119901;&#119903;&#119894;&#119899;&#119905;&#119891;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:"Calibri Light"' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function</span><![if !msEquation]><img
+src="The%20printf%20function_files/image001.png" width=282 height=34><![endif]></p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.6659in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+28 February 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>2:19
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.1805in;margin-left:0in;width:7.5in'>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119901;&#119903;&#119894;&#119899;&#119905;&#119891;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>command displays whatever string it is given.</span><![if !msEquation]><img
+src="The%20printf%20function_files/image002.png" width=404 height=20><![endif]></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>&nbsp;</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Getting
+started</h1>
+
+<h1 style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119901;&#119903;&#119894;&#119899;&#119905;&#119891;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>command is not actually part of the C
+language, so in order to to use this command, we need to load the library that
+contains this function.</span><![if !msEquation]><img
+src="The%20printf%20function_files/image003.png" width=730 height=38><![endif]></h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>In your code, at the top of the file, enter the line: </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>#</m:t></m:r><m:r><m:t>&#119894;&#119899;&#119888;&#119897;&#119906;&#119889;&#119890;</m:t></m:r><m:r><m:t>&lt;</m:t></m:r><m:r><m:t>&#119904;&#119905;&#119889;&#119894;&#119900;</m:t></m:r><m:r><m:t>.</m:t></m:r><m:r><m:t>h</m:t></m:r><m:r><m:t>&gt;</m:t></m:r></m:oMath><![endif]--><![if !msEquation]><img
+src="The%20printf%20function_files/image004.png" width=498 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>String
+formatting</h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119901;&#119903;&#119894;&#119899;&#119905;&#119891;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>allows you to &quot;format&quot; your
+string by using placeholders to represent data that can later be added in.</span><![if !msEquation]><img
+src="The%20printf%20function_files/image005.png" width=730 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>For
+example</h2>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#include
+&lt;stdio.h&gt;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int
+main(void) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>  </span>printf(&quot;Hello my name is %s, I go to
+UNSW&quot;, &quot;Andrew&quot;);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>  </span>return 0;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Result</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Your output would be
+&quot;Hello my name is Andrew, I go to UNSW&quot;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>What is happening
+here, is that the string &quot;Andrew&quot; is being substituted into the place
+where the %s is.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

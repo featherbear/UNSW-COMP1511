@@ -1,0 +1,161 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="The%20main%20function.htm">
+<link rel=File-List href="The%20main%20function_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.584in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.5812in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>The main
+function</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.5263in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+28 March 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>8:41
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.584in'>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>When a computer runs a C program, it needs to know where to start
+the program.<br>
+In C, this entry point is the function called </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119886;&#119894;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="The%20main%20function_files/image001.png" width=730 height=38><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>program.c</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#include
+&lt;stdio.h&gt;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int main (int
+argc, char *argv[]) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>printf(&quot;%d\n&quot;, argc);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>int i = 0;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>while (i &lt; argc) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>printf(&quot;Argument %d is:
+%s\n&quot;, i, argv[i]);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>        </span>i++;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>gcc program.c -o program</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>./program hello world</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>2</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>Argument 1 is: hello</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='font-weight:bold'>Argument 2 is: world</span></code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><span style='font-family:
+Calibri' lang=en-AU>Arguments of the </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119886;&#119894;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function</span><![if !msEquation]><img
+src="The%20main%20function_files/image002.png" width=346 height=28><![endif]></h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Look at the code in
+the round brackets…</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int main (int
+argc, char *argv[]) { ...</code></p>
+
+<p style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>(</m:t></m:r><m:r><m:t>&#119894;&#119899;&#119905;</m:t></m:r><m:r><m:t>&nbsp;</m:t></m:r><m:r><m:t>&#119886;&#119903;&#119892;&#119888;</m:t></m:r><m:r><m:t>,&nbsp;</m:t></m:r><m:r><m:t>&#119888;h&#119886;&#119903;</m:t></m:r><m:r><m:t>&nbsp;*</m:t></m:r><m:r><m:t>&#119886;&#119903;&#119892;&#119907;</m:t></m:r><m:r><m:t>[])</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span style='mso-spacerun:yes'> </span></span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>⇒</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>What's going on here?</span><![if !msEquation]><img
+src="The%20main%20function_files/image003.png" width=370 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119886;&#119894;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function in a C program gives the program
+access to the number of arguments received (</span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119886;&#119903;&#119892;&#119888;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>), as well as the contents of the
+arguments (in a convenient array called </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119886;&#119903;&#119892;&#119907;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>)</span><![if !msEquation]><img
+src="The%20main%20function_files/image004.png" width=738 height=38><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>Similar to calling a function and passing parameters, we can run a
+program and give parameters, and the </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119886;&#119894;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function in the program will give us access to
+those parameters.</span><![if !msEquation]><img
+src="The%20main%20function_files/image005.png" width=738 height=38><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

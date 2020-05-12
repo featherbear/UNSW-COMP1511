@@ -1,0 +1,83 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Array%20Tips%20and%20Tricks.htm">
+<link rel=File-List href="Array%20Tips%20and%20Tricks_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:8.225in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:.0215in;width:2.8479in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Array Tips
+and Tricks</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:.0215in;width:2.2284in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Tuesday,
+10 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>1:41
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:8.225in'>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><span style='font-family:
+Calibri' lang=en-AU>If we have an array </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>{1,&nbsp;5,&nbsp;1,&nbsp;1}</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, how could we turn this into an
+integer?</span><![if !msEquation]><img
+src="Array%20Tips%20and%20Tricks_files/image001.png" width=672 height=28><![endif]></h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Approach
+One</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>1000*1 + 100*5 +
+10*1 + 1*1</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Approach
+Two</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in'><img src="Array%20Tips%20and%20Tricks_files/image002.png"
+width=786 height=412
+alt="Machine generated alternative text:&#10;I personally don't like &#10;atoi function. I would suggest sscanf &#10;51 &#10;char myarray[5] &#10;'2', &#10;'3', &#10;int i; &#10;sscanf(myarray, &quot;%d&quot; , &#10;&amp;i); &#10;It's very standard, it's in the stdio.h library :) &#10;And in my opinion, it allows you much more freedom than atoi , arbitrary formatting of your &#10;number-string, and probably also allows for non-number characters at the end. &#10;EDIT I just found this wonderful question here on the site that explains and compares 3 different &#10;ways to do it- atoi &#10;sscanf and strtol . Also, there is a nice more-detailed insight into sscanf &#10;(actually, the whole family of *scanf functions). &#10;EDIT2 Looks like it's not just me personally disliking the atoi function. Here's a link to an answer &#10;explaining that the atoi function is deprecated and should not be used in newer code. &#10;share improve this answer &#10;edited May 23 '17 at 12:18 &#10;Community &#10;el &#10;answered Apr 18 '12 at 7:14 &#10;00 penelope &#10;o &#10;4 651 &#10;.30 .64 "></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'><a
+href="https://stackoverflow.com/a/10204663">https://stackoverflow.com/a/10204663</a></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=Pointers.htm>
+<link rel=File-List href="Pointers_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.7736in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:1.4756in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Pointers</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.2534in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Sunday,
+15 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>12:45
+AM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.7736in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Everything in a
+program is loaded into the memory when you run it.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>This includes,
+libraries, your code, and your variables that are used in the program.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>As each variable
+that a program uses is stored in the memory, there is evidently a way for
+programs to know where to look in the memory to get the value of that variable
+- a memory address.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Variables are stored
+in the 'program stack'</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Dynamic memory is
+stored in the 'program heap'</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Programmers can
+utilise this in the C language with what is known as a pointer.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Pointers</h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>If we had the integer </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119899;&#119906;&#119898;&#119887;&#119890;&#119903;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, with the value of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>5</m:t></m:r></m:oMath><![endif]--><![if !msEquation]><img
+src="Pointers_files/image001.png" width=362 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int number =
+5;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>Then we are able to get the memory address of where the variable </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119899;&#119906;&#119898;&#119887;&#119890;&#119903;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>(and hence the value </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>5</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>) is stored.</span><![if !msEquation]><img
+src="Pointers_files/image002.png" width=718 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int
+*locationOfNumber = &amp;number;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>To retrieve the value located at the memory address of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119897;&#119900;&#119888;&#119886;&#119905;&#119894;&#119900;&#119899;&#119874;&#119891;&#119873;&#119906;&#119898;&#119887;&#119890;&#119903;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>and </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119899;&#119906;&#119898;&#119887;&#119890;&#119903;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Pointers_files/image003.png" width=606 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>printf(&quot;%d&quot;,
+*locationOfNumber); // 5</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>If we wanted to print the memory location itself, we can use the
+format specifier '</span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>%</m:t></m:r><m:r><m:t>&#119901;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>'</span><![if !msEquation]><img
+src="Pointers_files/image004.png" width=576 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>printf(&quot;%p&quot;,
+locationOfNumber); // 0x12345678 // Some combination of hex numbers</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Pointer
+Declaration</h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int<span
+style='font-weight:bold'>*</span> (pointerVariable) = <span style='font-weight:
+bold'>&amp;</span>(currentVariable);</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Note the asterisks
+in the declaration - We are declaring a pointer</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>Note the ampersand in the assignment - We are getting the </span><span
+style='font-weight:bold;font-family:Calibri' lang=en-AU>address</span><span
+style='font-family:Calibri' lang=en-AU> of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119888;&#119906;&#119903;&#119903;&#119890;&#119899;&#119905;&#119881;&#119886;&#119903;&#119894;&#119886;&#119887;&#119897;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, and not its value</span><![if !msEquation]><img
+src="Pointers_files/image005.png" width=702 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>A purpose of using
+pointers is when we want a function to modify a variable outside of that
+function.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Without using
+pointers, the function will create a copy of the given value and modify that,
+instead of the original variable.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:20.0pt'><span
+style='font-weight:bold'>&gt; Read more: </span><a
+href="onenote:Functions.one#Passing%20by%20Reference%20\%20Value&amp;section-id={AACF18AB-F334-4AC4-ACA0-2C27A44AD0D8}&amp;page-id={8D221549-9D11-408C-9F7F-423917DC41AF}&amp;end&amp;base-path=https://unsw-my.sharepoint.com/personal/z5206677_ad_unsw_edu_au/Documents/UNSW%20z5206677/2018/Semester%20One/COMP1511/Programming/The%20C%20Language"><span
+style='font-weight:bold'>Passing by Reference / Value</span></a><span
+style='font-weight:bold'> in a function</span></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

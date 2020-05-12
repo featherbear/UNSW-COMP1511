@@ -1,0 +1,179 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=Loops.htm>
+<link rel=File-List href="Loops_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:8.1868in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:1.2104in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Loops</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.5347in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+14 March 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>9:20
+AM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:8.1868in'>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Introduction</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>In programming,
+loops allow you to execute lines of code repetitively until a condition is met
+(or becomes false)</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Loops are used to
+(but not limited to) reduce the redundancy and repetitiveness of the code.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Exiting
+a loop</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>There are several
+ways to exit a loop.<br>
+The normal method is to allow the loop to continue until the loop condition
+becomes false.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>// sentinel / flag</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Otherwise, we can
+also force the loop to exit, rather than wait until the code block in the loop
+ends.</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>We can do this using the </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119887;&#119903;&#119890;&#119886;&#119896;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>keyword.</span><![if !msEquation]><img
+src="Loops_files/image001.png" width=310 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119908;h&#119894;&#119897;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>loops</span><![if !msEquation]><img
+src="Loops_files/image002.png" width=168 height=28><![endif]></h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>the </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119908;h&#119894;&#119897;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>loop is the basic type of loop that keeps
+repeating a code until a condition is false.</span><![if !msEquation]><img
+src="Loops_files/image003.png" width=614 height=20><![endif]></p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Example</h2>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#include
+&lt;stdio.h&gt;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int main() {</code></p>
+
+<p><code style='margin:0in;margin-left:.375in;font-family:Consolas;font-size:
+11.0pt'>int num = 1;</code></p>
+
+<p><code style='margin:0in;margin-left:.375in;font-family:Consolas;font-size:
+11.0pt'>while (num &lt; 11) {</code></p>
+
+<p><code style='margin:0in;margin-left:.75in;font-family:Consolas;font-size:
+11.0pt'>printf(&quot;The current number is %d.\n&quot;, num);</code></p>
+
+<p><code style='margin:0in;margin-left:.75in;font-family:Consolas;font-size:
+11.0pt'>num = num + 1 // We can also write num++</code></p>
+
+<p><code style='margin:0in;margin-left:.375in;font-family:Consolas;font-size:
+11.0pt'>}</code></p>
+
+<p><code style='margin:0in;margin-left:.375in;font-family:Consolas;font-size:
+11.0pt'>return 0;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Output</h2>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 1.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 2.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 3.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 4.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 5.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 6.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 7.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 8.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 9.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>The current
+number is 10.</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>REMEMBER</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Don't forget to
+somehow modify the variables in the condition, otherwise it might enter an
+infinite loop!</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119900;&#119903;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>loops</span><![if !msEquation]><img
+src="Loops_files/image004.png" width=148 height=28><![endif]></h1>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

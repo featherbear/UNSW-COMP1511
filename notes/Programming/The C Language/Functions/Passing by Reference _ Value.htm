@@ -1,0 +1,252 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Passing%20by%20Reference%20_%20Value.htm">
+<link rel=File-List
+href="Passing%20by%20Reference%20_%20Value_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:9.85in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:3.759in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Passing by
+Reference / Value</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.2284in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Tuesday,
+10 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>2:35
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.9076in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>In programs, when a
+function is called, variables are passed as a value</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>However, <span
+style='font-weight:bold;text-decoration:underline'>if the variable is an array</span>,
+this variable will be passed as a reference.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Why?</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>It is complicated
+for a computer to replicate an array of values, but it is simple for a single
+value to be passed in the memory.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&amp;var -
+passes the memory location of var</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>*var -
+accesses the value of at the address of var (aka dereference)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>var - the
+address</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>We can get the
+memory address of a variable by prepending the ampersand (&amp;) symbol.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>To get the actual
+value of a memory address, we can prepend the asterisk (*) symbol.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>This is useful for when we wish to manipulate variables in our </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119886;&#119894;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function with another function</span><![if !msEquation]><img
+src="Passing%20by%20Reference%20_%20Value_files/image001.png" width=654
+height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Consider the code
+below</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.1062in;margin-left:0in;width:9.85in'><img
+src="Passing%20by%20Reference%20_%20Value_files/image002.png" width=946
+height=470
+alt="#include &lt;stdio.h&gt;&#13;&#10;&#13;&#10;void addOne(int *number);&#13;&#10;void badAddOne(int number);&#13;&#10;&#13;&#10;int main(void) {&#13;&#10;    int number = 0;&#13;&#10;&#13;&#10;    printf(&quot;number = %d\n&quot;, number);&#13;&#10;&#13;&#10;    badAddOne(number);&#13;&#10;    printf(&quot;number = %d\n&quot;, number);&#13;&#10;&#13;&#10;    addOne(&amp;number);&#13;&#10;    printf(&quot;number = %d\n&quot;, number);&#13;&#10;}&#13;&#10;&#13;&#10;void addOne(int *n) {&#13;&#10;    printf(&quot;\nfunction addOne called\n&quot;);&#13;&#10;    *n += 1;&#13;&#10;}&#13;&#10;&#13;&#10;void badAddOne(int n) {&#13;&#10;    printf(&quot;\nfunction badAddOne called\n&quot;);&#13;&#10;    n += 1;&#13;&#10;}&#13;&#10;&#13;&#10;Our output:&#13;&#10;&#13;&#10;number = 0&#13;&#10;function badAddOne called&#13;&#10;number = 0&#13;&#10;function addOne called&#13;&#10;number = 1&#13;&#10;&#13;&#10;Look at the function for badAddOne.&#13;&#10;&#13;&#10;The function is called with the argument &#119899;&#119906;&#119898;&#119887;&#119890;&#119903; (which equals to 0)&#13;&#10;The value of &#119899;&#119906;&#119898;&#119887;&#119890;&#119903;=0 is copied and used as the variable &#119899;. (&#119899;=0)&#13;&#10;The function increases the value of &#119899; by one (&#119899;=1)&#13;&#10;However this function did not affect the value of &#119899;&#119906;&#119898;&#119887;&#119890;&#119903;, which is still equal to zero.&#13;&#10;Look at the function for addOne.&#13;&#10;&#13;&#10;The function is called with the memory address of the variable &#119899;&#119906;&#119898;&#119887;&#119890;&#119903;.&#13;&#10;The memory address of &#119899;&#119906;&#119898;&#119887;&#119890;&#119903; is passed into the variable &#119899;.&#13;&#10;The function increases the value of the location referenced by &#119899; by one (&#119899;&#119906;&#119898;&#119887;&#119890;&#119903;=1)&#13;&#10;"></div>
+
+<table border=0 cellpadding=0 cellspacing=0 cols=4 valign=top style='direction:
+ ltr;border-collapse:collapse;border-width:0pt;margin-top:.3659in;margin-left:
+ 0in;width:7.318in'>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:3.9048in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0944in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.309in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.0083in;
+  height:1px;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1.1305in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td rowspan=4 valign=top style='vertical-align:top;margin:0in;padding:0pt;
+  width:3.9048in;height:3.2312in'>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#include
+  &lt;stdio.h&gt;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int
+  main(void) {</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>int number = 5;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>int x = number;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>int y = &amp;number;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>int *z = &amp;number;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>printf(&quot;x = %d\n&quot;, x);</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>printf(&quot;y = %d\n&quot;, y);</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>// This line is syntactically incorrect,</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>//<span style='mso-spacerun:yes'>  
+  </span>and therefore won't compile</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>// printf(&quot;*y = %d\n&quot;, *y);</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>//</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>printf(&quot;z = %d\n&quot;, z);</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+  style='mso-spacerun:yes'>    </span>printf(&quot;*z = %d\n&quot;, *z);</code></p>
+  <p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0944in;
+  height:1.1305in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.309in;
+  height:1.1305in'>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Output:</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>x = 5</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>y = 6422304</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>z = 6422304</p>
+  <p style='margin:0in;font-family:Calibri;font-size:11.0pt'>*z = 5</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.0083in;
+  height:1.1305in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.3687in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0944in;
+  height:.3687in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.309in;
+  height:.3687in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.0083in;
+  height:.3687in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:.1979in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0944in;
+  height:.1979in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td colspan=2 valign=top style='vertical-align:top;margin:0in;padding:0pt;
+  width:3.318in;height:.1979in'>
+  <p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+  lang=en-AU>Clearly </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>∗</m:t></m:r><m:r><m:t>&#119911;</m:t></m:r></m:oMath><![endif]--><span
+  style='font-family:Calibri' lang=en-AU><span
+  style='mso-spacerun:yes'> </span>is the only expresion which works</span><![if !msEquation]><img
+  src="Passing%20by%20Reference%20_%20Value_files/image003.png" width=328
+  height=20><![endif]></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1px;
+  height:1.5333in;font-size:1pt'>
+  <p style='font-size:1pt'>&nbsp;</p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:.0944in;
+  height:1.5333in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:1.309in;
+  height:1.5333in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+  <td valign=top style='vertical-align:top;margin:0in;padding:0pt;width:2.0083in;
+  height:1.5333in;font-size:1pt'>
+  <p style='font-size:1pt'></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

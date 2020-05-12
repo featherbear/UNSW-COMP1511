@@ -1,0 +1,168 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Logic%20Conundrums.htm">
+<link rel=File-List href="Logic%20Conundrums_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:5.9326in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.6243in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Logic
+Conundrums</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.4263in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Wednesday,
+25 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>1:37
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:5.9326in'>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Which
+expression can be used to replace the expression in: </h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>if
+(!A &amp;&amp; !B) { ... }</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>&nbsp;</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>1-
+!(A &amp;&amp; B)</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>2-
+!(A || B)</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>3- !A
++ !B</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>4-
+!(!A + !B)</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Answer</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>!(A || B)</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Other
+expressions</h2>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>From: !A &amp;&amp;
+!B</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>= Incorrect =</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!(A
+&amp;&amp; B)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!A + !B</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!(!A + !B)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!(A * B)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>A || B</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>= Correct =</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!(A + B)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>!A * !B</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h2 style='margin:0in;font-family:Calibri;font-size:14.0pt;color:#2E75B5'>Proof
+(JavaScript)</h2>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>[</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'> </span>&quot;A=true; B=true;&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'> </span>&quot;A=false; B=false;&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'> </span>&quot;A=true; B=false;&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'> </span>&quot;A=false; B=true;&quot;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>].map(vars
+=&gt; {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>eval(vars);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>console.log([</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                 </span>&quot;!(A &amp;&amp; B)&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                 </span>&quot;!(A || B)&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                 </span>&quot;!A + !B&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                 </span>&quot;!(!A + !B)&quot;,</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                </span>].filter(a =&gt;<span
+style='mso-spacerun:yes'>  </span>!(eval(a)) == !(!A &amp;&amp; !B)<span
+style='mso-spacerun:yes'>  </span>)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>               </span>);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>});</code></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

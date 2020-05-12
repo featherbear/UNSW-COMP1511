@@ -1,0 +1,200 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="Data%20Structures.htm">
+<link rel=File-List href="Data%20Structures_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.834in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:.0215in;width:2.2881in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Data
+Structures</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:.0215in;width:2.2284in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Tuesday,
+17 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>1:15
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.834in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Often we'd want to
+ideally group data that is related.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>For example, student
+data.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Their name?</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Their student
+ID?<br>
+&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>We could store it
+into two arrays</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>#define
+STUDENTS 1087</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>char
+name[STUDENTS][64];</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int
+ids[STUDENTS];</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>This will work, but
+will become very chaotic with more and more fields being added in.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>In C, we can fix this issue by using what is known as a </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;</m:t></m:r></m:oMath><![endif]--><![if !msEquation]><img
+src="Data%20Structures_files/image001.png" width=424 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in'><img src="Data%20Structures_files/image002.png"
+width=748 height=261
+alt="Machine generated alternative text:&#10;Using a typedef avoids having to write struct every time you declare a variable of that type: &#10;52 &#10;struct elem &#10;int &#10;i; &#10;char k; &#10;// compile error! &#10;elem user; &#10;// this is correct &#10;struct elem user; &#10;share improve this answer &#10;answered Oct 31 '08 at 7:16 &#10;Greg Hewgill &#10;615k 133 0979 . 1133 "></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><span style='font-family:
+Calibri' lang=en-AU>Declaring a </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;</m:t></m:r></m:oMath><![endif]--><![if !msEquation]><img
+src="Data%20Structures_files/image003.png" width=224 height=28><![endif]></h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>typedef
+struct {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>// declare your variables</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>int number;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}
+structureName;</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-size:16.0pt;color:#1E4E79'><span style='font-family:
+Calibri' lang=en-AU>Using </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>s</span><![if !msEquation]><img
+src="Data%20Structures_files/image004.png" width=184 height=28><![endif]></h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>typedef
+struct _student {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>int studentID;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>char name[MAX_NAME_LENGTH};</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>int tutorialMark;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>int ass1_mark;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>} student;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int main() {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>student s;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>s.studentID = 5206677;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>printf(&quot;Student ID: %d\n&quot;,
+s.studentID);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Structures
+are passed by value, not by reference!</h1>
+
+<ul type=disc style='margin-left:.375in;direction:ltr;unicode-bidi:embed;
+ margin-top:0in;margin-bottom:0in'>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt' lang=en-AU>Define a function </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119907;&#119900;&#119894;&#119889;</m:t></m:r><m:r><m:t>&nbsp;</m:t></m:r><m:r><m:t>&#119891;&#119906;&#119899;&#119888;&#119905;&#119894;&#119900;&#119899;</m:t></m:r><m:d><m:dPr><m:ctrlPr/></m:dPr><m:e><m:r><m:t>&#119904;&#119905;&#119906;&#119888;&#119905;&#119906;&#119903;&#119890;&#119873;&#119886;&#119898;&#119890;</m:t></m:r><m:r><m:t>&nbsp;∗</m:t></m:r><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;&#119906;&#119903;&#119890;&#119881;&#119886;&#119903;&#119894;&#119886;&#119887;&#119897;&#119890;</m:t></m:r></m:e></m:d><m:d><m:dPr><m:begChr m:val="{"/><m:endChr m:val="}"/><m:ctrlPr/></m:dPr><m:e><m:r><m:t>…</m:t></m:r></m:e></m:d></m:oMath><![endif]--><![if !msEquation]><img
+     src="Data%20Structures_files/image005.png" width=530 height=20><![endif]></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt' lang=en-AU>Any mention of
+     structureVariable then needs to be dereferenced!<br>
+          </span><!--[if gte msEquation 12]><m:oMathPara xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:d><m:dPr><m:ctrlPr/></m:dPr><m:e><m:r><m:t>∗</m:t></m:r><m:r><m:t>&#119904;&#119905;&#119906;&#119888;&#119905;&#119906;&#119903;&#119890;&#119881;&#119886;&#119903;&#119894;&#119886;&#119887;&#119897;&#119890;</m:t></m:r></m:e></m:d><m:r><m:t>.</m:t></m:r><m:r><m:t>&#119888;</m:t></m:r></m:oMath></m:oMathPara><![endif]--><span
+     style='font-family:Calibri;font-size:11.0pt' lang=en-AU><br>
+          We can also use </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;&#119906;&#119903;&#119890;&#119881;&#119886;&#119903;&#119894;&#119886;&#119887;&#119897;&#119890;</m:t></m:r><m:r><m:t>−&gt;</m:t></m:r><m:r><m:t>&#119888;</m:t></m:r></m:oMath><![endif]--><![if !msEquation]><img
+     src="Data%20Structures_files/image006.png" width=646 height=54><![endif]></li>
+ <li style='margin-top:0;margin-bottom:0;vertical-align:middle'><span
+     style='font-family:Calibri;font-size:11.0pt' lang=en-AU>Call that function
+     </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119906;&#119899;&#119888;&#119905;&#119894;&#119900;&#119899;</m:t></m:r><m:d><m:dPr><m:ctrlPr/></m:dPr><m:e><m:r><m:t>&amp;</m:t></m:r><m:r><m:t>&#119904;&#119905;&#119903;&#119906;&#119888;&#119905;&#119906;&#119903;&#119890;&#119881;&#119886;&#119903;&#119894;&#119886;&#119887;&#119897;&#119890;</m:t></m:r></m:e></m:d></m:oMath><![endif]--><![if !msEquation]><img
+     src="Data%20Structures_files/image007.png" width=370 height=20><![endif]></li>
+</ul>
+
+<p style='margin:0in;margin-left:.375in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Structs
+and Arrays</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>In this fashion, we
+can also store a collection of structs</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>student
+students[5]; // Will create an array that stores 5 items of the type `student`</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href=Arrays.htm>
+<link rel=File-List href="Arrays_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.4638in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:1.2611in'>
+
+<p style='margin:0in;font-family:"Calibri Light";font-size:20.0pt'>Arrays</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.1034in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Sunday,
+8 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>7:32
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.1805in;margin-left:0in;width:7.4638in'>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>What
+are arrays?</h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>Think of an </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119886;&#119903;&#119903;&#119886;&#119910;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>as a list of the same type of items.</span><![if !msEquation]><img
+src="Arrays_files/image001.png" width=378 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>A list of numbers, a
+list of prices, etc…</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>We generally use
+arrays when we want to group a collection of data items together.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>One could store each
+item like</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item1 =
+1;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item2 =
+2;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item3 =
+3;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item4 =
+4;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item5 =
+5;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>…</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>But, it won't work
+very well if we had 1000 items to store, let alone it being time consuming.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Instead, arrays can
+be used to efficiently carry out this task</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item[3];
+// The 5 represents the size of the array (how many things are we storing)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>item[0] = 1;
+// Item of index 0 (first item)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>item[1] = 2;
+// Index one (second item)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>item[2] = 3;
+// Index two (third item)</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Items
+in an Array</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Each item in an
+array is given a specific index.</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>Think of pages in a
+book - except our page numbering starts at 0</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The first value in an array is given the index of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>0</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Arrays_files/image002.png" width=352 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The second value in an array is given the index of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>1</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Arrays_files/image003.png" width=370 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The third value in an array is given the index of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>2</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Arrays_files/image004.png" width=358 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>… and so forth</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Accessing
+Items in an Array</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>To retrieve the
+value of a specific array index, we write it in the following manner:</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>someArrayVariable[index]</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>For example, if we have an array called </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119900;&#119889;&#119889;&#119873;&#119906;&#119898;&#119887;&#119890;&#119903;&#119904;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, which had the values </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>{1,3,5,7,9}</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>…</span><![if !msEquation]><img
+src="Arrays_files/image005.png" width=594 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>If we wrote </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119900;&#119889;&#119889;&#119873;&#119906;&#119898;&#119887;&#119890;&#119903;&#119904;</m:t></m:r><m:r><m:t>[2]</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, we would be getting the third element
+of the array, a </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>5</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Arrays_files/image006.png" width=578 height=20><![endif]></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>oddNumbers[2]
+== 5 // this is true</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Declaring
+and Initialising an Array</h1>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>To declare an array,
+we create it by using the following syntax</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>itemType
+arrayName[arrayLength];</code></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>For example</p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item[3];</code></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>This will create an array called </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119894;&#119905;&#119890;&#119898;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>that will be able to store </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>3</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span style='mso-spacerun:yes'> </span></span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119894;&#119899;&#119905;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>egers.</span><![if !msEquation]><img
+src="Arrays_files/image007.png" width=496 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>If we need to set
+the value of each item to the same value, we could use </p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int item[3] =
+{2};</code></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>Now each item in the array will have an array of </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>2</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="Arrays_files/image008.png" width=364 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>

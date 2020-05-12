@@ -1,0 +1,206 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=OneNote.File>
+<meta name=Generator content="Microsoft OneNote 15">
+<link id=Main-File rel=Main-File href="The%20fopen%20command.htm">
+<link rel=File-List href="The%20fopen%20command_files/filelist.xml">
+</head>
+
+<body lang=en-AU style='font-family:Calibri;font-size:11.0pt'>
+
+<div style='direction:ltr;border-width:100%'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:7.5in'>
+
+<div style='direction:ltr;margin-top:0in;margin-left:0in;width:2.9729in'>
+
+<p style='margin:0in;font-size:20.0pt'><span style='font-family:"Calibri Light"'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119900;&#119901;&#119890;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:"Calibri Light"' lang=en-AU><span
+style='mso-spacerun:yes'> </span>command</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image001.png" width=296 height=34><![endif]></p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.0388in;margin-left:0in;width:2.3333in'>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>Saturday,
+14 April 2018</p>
+
+<p style='margin:0in;font-family:Calibri;font-size:10.0pt;color:#767676'>11:16
+PM</p>
+
+</div>
+
+<div style='direction:ltr;margin-top:.4305in;margin-left:0in;width:7.5in'>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Overview</h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>The </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119900;&#119901;&#119890;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>function is the function used to access a
+file.</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image002.png" width=396 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>In combination with </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119892;&#119890;&#119905;&#119888;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>and </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119901;&#119906;&#119905;&#119888;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, we have access to reading and writing
+values in a file</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image003.png" width=612 height=20><![endif]></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>&nbsp;</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Declaration</h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>FILE
+*fopen(const char *filename, const char *mode)</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>&nbsp;</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Parameters</h1>
+
+<p style='margin:0in;font-size:11.0pt'><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119894;&#119897;&#119890;&#119899;&#119886;&#119898;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span style='mso-spacerun:yes'> </span>-
+is the path to a certain file</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image004.png" width=292 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119898;&#119900;&#119889;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span style='mso-spacerun:yes'> </span>-
+is a string that is either &quot;r&quot;, &quot;w&quot;, &quot;a&quot;,
+&quot;r+&quot;, &quot;w+&quot;, or &quot;a+&quot;</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image005.png" width=438 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>&nbsp;</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Remarks</h1>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>If </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119894;&#119897;&#119890;&#119899;&#119886;&#119898;&#119890;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>could not be accessed, </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119900;&#119901;&#119890;&#119899;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU><span
+style='mso-spacerun:yes'> </span>will return </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119873;&#119880;&#119871;&#119871;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, and sets a special variable </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119890;&#119903;&#119903;&#119899;&#119900;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>.</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image006.png" width=630 height=20><![endif]></p>
+
+<p style='margin:0in;font-size:11.0pt'><span style='font-family:Calibri'
+lang=en-AU>If we catch when </span><!--[if gte msEquation 12]><m:oMath xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"><m:r><m:t>&#119891;&#119900;&#119901;&#119890;&#119899;</m:t></m:r><m:r><m:t>==</m:t></m:r><m:r><m:t>&#119873;&#119880;&#119871;&#119871;</m:t></m:r></m:oMath><![endif]--><span
+style='font-family:Calibri' lang=en-AU>, we therefore have a method to detect
+errors.</span><![if !msEquation]><img
+src="The%20fopen%20command_files/image007.png" width=554 height=20><![endif]></p>
+
+<p style='margin:0in;font-family:Calibri;font-size:11.0pt'>These errors usually
+include when a file does not exist.</p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>&nbsp;</h1>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Example
+(Reading an existing file)</h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>FILE *file =
+fopen(&quot;hello.txt&quot;, &quot;r&quot;);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>if (file ==
+NULL) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>perror(&quot;Error: &quot;);<span
+style='mso-spacerun:yes'>  </span>// prints why the open failed</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                        </span>// perror: &quot;Error:
+&quot; + value of errno</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>return -2;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int c;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>while ((c =
+fgetc(file)) != EOF) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>fputc(c, stdout); //</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                      </span>// putchar(c) performs
+the equivalent operation</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>fclose(file);
+// Close the file</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<h1 style='margin:0in;font-family:Calibri;font-size:16.0pt;color:#1E4E79'>Example
+(Writing a new file)</h1>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>FILE *file =
+fopen(&quot;hello.txt&quot;, &quot;w&quot;);</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>if (file ==
+NULL) {</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>perror(&quot;Error: &quot;);<span
+style='mso-spacerun:yes'>  </span>// prints why the open failed</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>                        </span>// perror: &quot;Error:
+&quot; + value of errno</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'><span
+style='mso-spacerun:yes'>    </span>return -2;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>}</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>int c;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>fprint(file,
+&quot;Hello %s&quot;, &quot;world&quot;); // Same as printf, but the first
+argument is a FILE</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>fclose(file);
+// Close the file</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+<p><code style='margin:0in;font-family:Consolas;font-size:11.0pt'>&nbsp;</code></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<p style='margin:0in'>&nbsp;</p>
+
+<p style='text-align:left;margin:0in;font-family:Arial;font-size:9pt;
+color:#969696;direction:ltr'>Created with Microsoft OneNote 2016.</p>
+
+</div>
+
+</body>
+
+</html>
